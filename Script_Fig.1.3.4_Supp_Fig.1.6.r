@@ -386,10 +386,10 @@ CR_graph <- ggplot(data = df_final_CR_ref,aes(x = CR_SLSL_final, y = Carrier_rat
   theme(axis.text.x = element_text(face="bold", size = 15,angle=45, hjust = 1),axis.title=element_text(size=18,face="bold"),
         axis.text.y = element_text(face="bold", size = 15),legend.text = element_text(size=16)) + 
   theme(legend.title = element_blank())+ guides(color=guide_legend(override.aes = list(size=4)))+
-  scale_x_continuous("CR found in our analysis in SLSJ",breaks=c(0,25,50,75,100,125,150,175,200),labels = c("0","1/25","1/50","1/75","1/100","1/125","1/150","1/175","1/200")) +
-  scale_y_continuous("CR reported in the literature in SLSJ",breaks=c(0,25,50,75,100,125),
-                     labels = c("0","1/25","1/50","1/75","1/100","1/125"))+
-  geom_text(x = 75, y = 100, label = lm_eqn(df_final_CR_ref), parse = TRUE,size=8)
+  scale_x_continuous("CR found in our analysis in SLSJ",breaks=c(0,25,50,75,100,125,150,175,200,225),limits=c(0,225),labels = c("0","1/25","1/50","1/75","1/100","1/125","1/150","1/175","1/200","1/225")) +
+  scale_y_continuous("CR reported in the literature in SLSJ",breaks=c(0,25,50,75,100,125,150,175,200,225),limits=c(0,225),
+                     labels = c("0","1/25","1/50","1/75","1/100","1/125","1/150","1/175","1/200","1/225"))+
+  geom_text(x = 50, y = 175, label = lm_eqn(df_final_CR_ref), parse = TRUE,size=8)
 
 ## Save in PDF format
 outfile <- paste0("Figure_supp_1.pdf")
