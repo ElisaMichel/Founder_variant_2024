@@ -75,16 +75,16 @@ df_for_graphs_RQ_SAG$Status <-ifelse(df_for_graphs_RQ_SAG$ID %in% variants_known
                                      "New founder variant")
 ## Do the graph for SLSJ
 founder_WQ_known <- ggplot(data = df_for_graphs_RQ_SAG) + geom_point(aes(x = CR_SAG, y = CR_RQ,colour =Status,
-                                      shape=Source_ind_WQ,text=SNP),position=position_jitter(h=0.00,w=0.15))+
+                                                                         shape=Source_ind_WQ,text=SNP),size=3,position=position_jitter(h=0.00,w=0.15))+
   scale_shape_manual(values=c(19,0))+
   theme(axis.text.x = element_text(face="bold", size = 20),axis.title=element_text(size=22,face="bold"),
         axis.text.y = element_text(face="bold", size = 20),legend.text = element_text(size=14)) + 
   scale_color_manual(values = c("red","blue", "green"))+
   theme(legend.title = element_blank(),legend.position = "bottom")+ guides(color=guide_legend(override.aes = list(size=4)))+
   xlab("Carrier rate in SLSJ") + ylab("Carrier rate in UQc")+
-  scale_x_continuous("Carrier rate in SLSJ",breaks=c(0,100,200,300),labels = c(0,"1/100","1/200","1/300")) +
-  scale_y_continuous("Carrier rate in UQc",breaks=c(0,2000,4000,6000),
-                     labels = c(0,"1/2,000","1/4,000","1/6,000"))
+  scale_x_continuous("Carrier rate in SLSJ",breaks=c(0,2000,4000,6000,8000),limits=c(0,8000),labels = c(0,"1/2,000","1/4,000","1/6,000","1/8,000")) +
+  scale_y_continuous("Carrier rate in UQc",breaks=c(0,2000,4000,6000,8000),limits=c(0,8000),
+                     labels = c(0,"1/2,000","1/4,000","1/6,000","1/8,000"))
 
 ## Save in PDF format
 outfile <- paste0("Figure_3_CR_SAG_RQ.pdf")
