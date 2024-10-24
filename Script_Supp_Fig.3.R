@@ -90,8 +90,8 @@ figure_method_compare_gnomAD_WGS_WQ <- ggplot(data = VTA_variants_NTNFE_clean,
         axis.text.y = element_text(face="bold", size = 15),legend.text = element_text(size=16)) + xlim(0,0.02)+ylim(0,0.02)+
   theme(legend.title = element_blank())+ guides(color=guide_legend(override.aes = list(size=4)))+
   xlab("Variant frequency in ClinVar for QcP WGS") + ylab("Variant frequency in gnomAD")+
-  scale_color_manual(labels = c("Variants with RFD≥10% in gnomAD", "Variants with RFD≥10% in QcP",
-                                "Variants without RFD≥10%"),
+  scale_color_manual(labels = c("Variants with RFD≥10% in gnomAD (n=389)", "Variants with RFD≥10% in QcP (n=1537)",
+                                "Variants without RFD≥10%" (n=111)),
                      values = c("deeppink3", "deepskyblue","grey"))
 
 ## Save in PDF format
