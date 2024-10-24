@@ -100,5 +100,5 @@ pdf(outfile,  width = 30, height = 10)
 print(figure_method_compare_gnomAD_WGS_WQ)
 dev.off()
 ## Save in PNG format
-ggsave("/lustre03/project/6033529/saguenay_disease/Analyses_final_version_really/Article/figure_supp_3.png", width = 12, height = 8)
+ggsave("/lustre03/project/6033529/saguenay_disease/Analyses_final_version_really/Article/figure_supp_2.png", width = 12, height = 8)
 
