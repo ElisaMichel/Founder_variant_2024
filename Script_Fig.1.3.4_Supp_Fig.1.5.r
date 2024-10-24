@@ -2,7 +2,7 @@
 #
 # September 2024 by MICHEL Elisa
 #
-# Do Figures in article Founder variants: Fig.3 ; Supp Fig.6 ; Fig.1 ; Fig.4 ; Supp Fig.1
+# Do Figures in article Founder variants: Fig.3 ; Supp Fig.5 ; Fig.1 ; Fig.4 ; Supp Fig.1
 ################################
 rm(list = ls());
 ### Packages
@@ -121,7 +121,7 @@ figure_method_compare_WGS_Imput <- ggplot(data = df_final_hist_CR_both_complete,
   geom_text(x = 0.07, y = 0.26, label = lm_eqn(df_final_hist_CR_both_complete), parse = TRUE,size=8)
 
 ## Save in PDF format
-outfile <- paste0("Figure_supp_6.pdf")
+outfile <- paste0("Figure_supp_5.pdf")
 pdf(outfile,  width = 20, height = 10)
 print(figure_method_compare_WGS_Imput)
 dev.off()
