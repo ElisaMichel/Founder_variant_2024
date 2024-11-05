@@ -2,7 +2,7 @@
 #
 # September 2024 by MICHEL Elisa
 #
-# Do Figure in article Founder variants: Supp Fig.3
+# Do Figure in article Founder variants: Supp Fig.2
 ################################
 rm(list = ls());
 ### Packages
@@ -95,7 +95,7 @@ figure_method_compare_gnomAD_WGS_WQ <- ggplot(data = VTA_variants_NTNFE_clean,
                      values = c("deeppink3", "deepskyblue","grey"))
 
 ## Save in PDF format
-outfile <- paste0("/lustre03/project/6033529/saguenay_disease/Analyses_final_version_really/figure_supp_3.pdf")
+outfile <- paste0("/lustre03/project/6033529/saguenay_disease/Analyses_final_version_really/figure_supp_2.pdf")
 pdf(outfile,  width = 30, height = 10)
 print(figure_method_compare_gnomAD_WGS_WQ)
 dev.off()
