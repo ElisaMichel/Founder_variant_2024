@@ -94,7 +94,7 @@ dev.off()
 ## Save in PNG format
 ggsave("Figure_3_CR_SAG_RQ.png", width = 13, height = 13,dpi=300)
 
-################################################################# Supp Fig.6 ############################################################
+################################################################# Supp Fig.5 ############################################################
 ######### Graph Correlation Imput / WGS 
 ## Select data for Graph 
 df_final_hist <- df_final[,c(1:23)]
@@ -126,7 +126,7 @@ pdf(outfile,  width = 20, height = 10)
 print(figure_method_compare_WGS_Imput)
 dev.off()
 ## Save in PNG format
-ggsave("Figure_supp_6.png", width = 8, height = 8,dpi=300)
+ggsave("Figure_supp_5.png", width = 8, height = 8,dpi=300)
 
 ################################################################# Fig.1 ############################################################
 ######### Graph Gnomad/(Imput if missing WGS) MAF on enriched Variants (1304) in QcP
@@ -347,7 +347,7 @@ dev.off()
 ## Save in PNG format
 ggsave("Figure_4.png", width = 17, height = 8,bg="white",dpi=300)
 
-################################### Supp Fig.3 ##############################################
+################################### Supp Fig.1 ##############################################
 ## Copy the table with all info
 df_final_CR <- df_final
 ## Open files with info
